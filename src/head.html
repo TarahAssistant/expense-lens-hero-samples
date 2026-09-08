@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Lens hero sample {{LETTER}}: {{TITLE}}</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" async></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { accent: '#14B8A6', dark: '#050505', light: '#EDEDED' } } } }</script>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body class="bg-[#FAFAFA] dark:bg-[#050505] text-[#171717] dark:text-[#EDEDED] antialiased overflow-x-hidden">
+    <div class="sample-switch" aria-label="Sample switcher">
+      <a href="index.html">Samples</a>
+      <a href="a.html" {{ON_A}}>A</a><a href="b.html" {{ON_B}}>B</a><a href="c.html" {{ON_C}}>C</a><a href="d.html" {{ON_D}}>D</a>
+    </div>
+
+    <!-- Grid Background -->
+    <div class="grid-overlay">
+      <div class="grid-inner">
+        <div class="grid-line-v"></div>
+        <div class="grid-line-v hidden md:block"></div>
+        <div class="grid-line-v hidden lg:block"></div>
+        <div class="grid-line-v"></div>
+      </div>
+    </div>

@@ -1,0 +1,37 @@
+    <!-- Hero Section (variant C) -->
+    <section class="md:pt-40 md:pb-24 pt-32 pb-16 relative z-10 overflow-hidden">
+      <div class="container mx-auto px-4 relative max-w-7xl z-10">
+        <div class="flex flex-col text-center mb-24 relative items-center justify-center gap-7">
+          <div class="flex flex-col w-full z-10 items-center justify-center dark:mix-blend-screen">
+{{H1_CENTER}}
+          </div>
+          <p class="animate-on-scroll text-sm md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-xl leading-relaxed" style="animation-delay: 0.4s">
+            Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. Now on iPhone.
+          </p>
+
+          <!-- Viewfinder: lens rings around the QR code. Hidden on phones. -->
+          <div class="hidden sm:grid relative w-full max-w-[640px] h-[380px] place-items-center animate-on-scroll" style="animation-delay: 0.5s">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+              <div class="lens-ring w-[340px] h-[340px] bg-[#14B8A6] blur-[100px] opacity-25 animate-breathe"></div>
+              <div class="lens-ring w-[260px] h-[260px] border-dashed animate-spin-slow !border-[#14B8A6]/25"></div>
+              <div class="lens-ring w-[340px] h-[340px] !border-[#14B8A6]/20"></div>
+              <div class="lens-ring w-[520px] h-[520px] border-dashed opacity-40 animate-spin-reverse !border-white/10"></div>
+              <div class="lens-ring w-[640px] h-[640px] lens-gradient opacity-40 animate-spin-slow"></div>
+            </div>
+            <div class="relative z-10 flex flex-col items-center gap-4">
+              <div class="relative">
+                <span class="viewfinder-corner tl"></span><span class="viewfinder-corner tr"></span><span class="viewfinder-corner bl"></span><span class="viewfinder-corner br"></span>
+                <div class="qr-tile w-[176px] h-[176px] p-2.5 rounded-lg" style="box-shadow:0 0 0 1px rgba(20,184,166,0.5), 0 0 60px rgba(20,184,166,0.28);">{{QR}}</div>
+              </div>
+              <span class="text-[10px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">Scan to install on iPhone</span>
+            </div>
+          </div>
+
+          <div class="animate-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto" style="animation-delay: 0.6s">
+{{BADGE}}
+            <a href="https://app.expense-lens.com/signup" class="inline-block w-full sm:w-auto text-center bg-[#14B8A6] text-[#050505] px-12 py-4 text-xs font-semibold tracking-widest uppercase font-sans-body hover:bg-[#2DD4BF] transition-colors whitespace-nowrap">Get Started Free</a>
+          </div>
+        </div>
+{{STATS}}
+      </div>
+    </section>

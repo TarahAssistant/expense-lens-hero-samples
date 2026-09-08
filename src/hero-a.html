@@ -1,0 +1,40 @@
+    <!-- Hero Section (variant A) -->
+    <section class="md:pt-48 md:pb-32 pt-36 pb-20 relative z-10 overflow-hidden min-h-[90vh] flex flex-col justify-center">
+{{LENS}}
+      <div class="container mx-auto px-4 relative max-w-7xl z-10">
+        <div class="flex flex-col text-center mb-24 relative items-center justify-center">
+          <div class="flex flex-col w-full z-10 items-center justify-center dark:mix-blend-screen">
+{{H1_CENTER}}
+          </div>
+
+          <!-- Subheadline / Badge -->
+          <div class="flex flex-col md:flex-row md:mt-12 md:mb-10 z-10 w-full mt-10 mb-8 gap-6 items-center justify-center">
+            <div class="animate-on-scroll group relative" style="animation-delay: 0.45s">
+              <div class="border-subtle flex hover:bg-[#F5F5F5] dark:group-hover:bg-[#111] transition-colors md:h-14 z-10 dark:bg-[#0A0A0A] h-12 border rounded-full p-1 pr-6 pl-2 relative gap-4 items-center bg-white">
+                <div class="w-10 h-10 overflow-hidden flex border-subtle text-[#171717] dark:text-[#EDEDED] bg-[#F5F5F5] dark:bg-[#111] border rounded-full relative items-center justify-center">
+                  <iconify-icon icon="simple-icons:apple" class="text-lg text-[#14B8A6]"></iconify-icon>
+                </div>
+                <div class="flex flex-col items-start text-left">
+                  <span class="text-[9px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Now available</span>
+                  <span class="text-xs leading-none text-[#171717] dark:text-[#EDEDED] font-sans-body font-semibold">iPhone app on the App Store</span>
+                </div>
+              </div>
+            </div>
+            <p class="animate-on-scroll text-sm md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-xl text-center md:text-left leading-relaxed backdrop-blur-sm" style="animation-delay: 0.5s">
+              Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. Built for freelancers, expats, and digital nomads who track expenses in multiple currencies and want their data to actually make sense.
+            </p>
+          </div>
+
+          <!-- CTA row: web signup, App Store badge, QR (QR hidden on phones) -->
+          <div class="animate-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto" style="animation-delay: 0.6s">
+            <a href="https://app.expense-lens.com/signup" class="inline-block w-full sm:w-auto text-center bg-[#14B8A6] text-[#050505] px-12 py-4 text-xs font-semibold tracking-widest uppercase font-sans-body hover:bg-[#2DD4BF] transition-colors whitespace-nowrap">Get Started Free</a>
+{{BADGE}}
+            <div class="hidden sm:flex items-center gap-4 pl-6 border-l border-subtle text-left">
+              <div class="qr-tile w-[88px] h-[88px] p-1.5">{{QR}}</div>
+              <span class="text-[10px] uppercase tracking-widest leading-relaxed text-[#595959] dark:text-[#A1A1AA] font-sans-body max-w-[130px]">Scan with your iPhone camera</span>
+            </div>
+          </div>
+        </div>
+{{STATS}}
+      </div>
+    </section>

@@ -1,0 +1,48 @@
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 animate-on-scroll">
+      <div class="border-subtle relative flex dark:bg-[#0A0A0A]/80 w-full max-w-4xl border p-1.5 shadow-xl dark:shadow-2xl backdrop-blur-xl gap-1 items-center justify-center rounded-sm transition-colors duration-300 bg-white/80">
+        <div class="hidden md:flex items-center gap-1 flex-1 justify-start">
+          <a href="#features" class="hover:text-[#171717] dark:hover:text-[#EDEDED] px-4 py-2 text-xs tracking-widest uppercase transition-colors text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Features</a>
+          <a href="#pricing" class="hover:text-[#171717] dark:hover:text-[#EDEDED] px-4 py-2 text-xs tracking-widest uppercase transition-colors text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Pricing</a>
+        </div>
+
+        <div id="nav-wordmark" class="flex items-center justify-center flex-shrink-0 transition-opacity">
+          <div class="px-2 md:px-8 text-lg md:text-xl text-[#171717] dark:text-[#EDEDED] uppercase flex items-center gap-2 tracking-tighter font-sans-display font-medium">
+            <div class="w-1.5 h-1.5 bg-[#14B8A6] animate-pulse shadow-[0_0_8px_rgba(20,184,166,0.6)]"></div>
+            Expense Lens
+          </div>
+        </div>
+
+        <!-- Mobile-only: lang -->
+        <div id="mobile-nav-extras" class="flex md:hidden items-center gap-1 ml-auto">
+          <div class="relative" id="lang-switcher-mobile">
+            <button onclick="toggleLangMenu('mobile')" type="button" class="p-2 text-[#595959] dark:text-[#A1A1AA] hover:text-[#171717] dark:hover:text-[#EDEDED] transition-colors" aria-label="Select language">
+              <iconify-icon icon="lucide:globe" class="text-lg"></iconify-icon>
+            </button>
+            <div id="lang-menu-mobile" class="hidden absolute right-0 top-full mt-2 w-40 rounded-2xl shadow-2xl overflow-hidden z-50 py-1" style="border:1px solid var(--border);background:var(--card-bg);">
+              <a href="#" class="flex items-center justify-between px-4 py-2.5 text-sm font-medium transition-colors lang-menu-item" style="color:var(--text);"><span>English</span><iconify-icon icon="lucide:check" style="color:#14B8A6;" width="14" height="14"></iconify-icon></a>
+              <a href="#" class="flex items-center justify-between px-4 py-2.5 text-sm transition-colors lang-menu-item" style="color:var(--text);"><span>Deutsch</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop right -->
+        <div id="desktop-nav-extras" class="hidden md:flex items-center gap-1 flex-1 justify-end">
+          <a href="#" class="hover:text-[#171717] dark:hover:text-[#EDEDED] px-4 py-2 text-xs tracking-widest uppercase transition-colors text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Roadmap</a>
+          <a href="#faq" class="hover:text-[#171717] dark:hover:text-[#EDEDED] px-4 py-2 text-xs tracking-widest uppercase transition-colors text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">FAQ</a>
+          <a href="#" class="hover:text-[#171717] dark:hover:text-[#EDEDED] px-4 py-2 text-xs tracking-widest uppercase transition-colors text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Blog</a>
+          <a href="https://app.expense-lens.com/login" class="hover:text-[#171717] dark:hover:text-[#EDEDED] px-4 py-2 text-xs tracking-widest uppercase transition-colors text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Login</a>
+          <div class="relative" id="lang-switcher-desktop">
+            <button onclick="toggleLangMenu('desktop')" type="button" class="p-2 text-[#595959] dark:text-[#A1A1AA] hover:text-[#171717] dark:hover:text-[#EDEDED] transition-colors" aria-label="Select language">
+              <iconify-icon icon="lucide:globe" class="text-lg"></iconify-icon>
+            </button>
+            <div id="lang-menu-desktop" class="hidden absolute right-0 top-full mt-2 w-40 rounded-2xl shadow-2xl overflow-hidden z-50 py-1" style="border:1px solid var(--border);background:var(--card-bg);">
+              <a href="#" class="flex items-center justify-between px-4 py-2.5 text-sm font-medium transition-colors lang-menu-item" style="color:var(--text);"><span>English</span><iconify-icon icon="lucide:check" style="color:#14B8A6;" width="14" height="14"></iconify-icon></a>
+              <a href="#" class="flex items-center justify-between px-4 py-2.5 text-sm transition-colors lang-menu-item" style="color:var(--text);"><span>Deutsch</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>

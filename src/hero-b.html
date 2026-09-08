@@ -1,0 +1,42 @@
+    <!-- Hero Section (variant B) -->
+    <section class="md:pt-44 md:pb-24 pt-32 pb-16 relative z-10 overflow-hidden">
+      <div class="container mx-auto px-4 relative max-w-7xl z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center mb-24">
+          <div class="flex flex-col items-start gap-7">
+            <div class="animate-on-scroll" style="animation-delay: 0.1s">
+              <div class="border-subtle flex dark:bg-[#0A0A0A] h-12 border rounded-full p-1 pr-6 pl-2 gap-4 items-center bg-white">
+                <div class="w-10 h-10 flex border-subtle bg-[#F5F5F5] dark:bg-[#111] border rounded-full items-center justify-center"><iconify-icon icon="simple-icons:apple" class="text-lg text-[#14B8A6]"></iconify-icon></div>
+                <div class="flex flex-col items-start text-left">
+                  <span class="text-[9px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">New</span>
+                  <span class="text-xs leading-none text-[#171717] dark:text-[#EDEDED] font-sans-body font-semibold">Now on the App Store</span>
+                </div>
+              </div>
+            </div>
+            <div class="dark:mix-blend-screen">
+{{H1_LEFT}}
+            </div>
+            <p class="animate-on-scroll text-sm md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-xl leading-relaxed" style="animation-delay: 0.4s">
+              Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. 158 currencies, tax-ready reports, on iPhone and on the web.
+            </p>
+            <div class="animate-on-scroll flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto" style="animation-delay: 0.5s">
+{{BADGE}}
+              <a href="https://app.expense-lens.com/signup" class="inline-block w-full sm:w-auto text-center border border-subtle text-[#171717] dark:text-[#EDEDED] px-10 py-4 text-xs font-semibold tracking-widest uppercase font-sans-body hover:border-[#14B8A6] hover:text-[#14B8A6] transition-colors whitespace-nowrap">Use it on the web</a>
+            </div>
+            <!-- Install strip, desktop only -->
+            <div class="animate-on-scroll hidden sm:flex items-center gap-5 p-4 border border-subtle dark:bg-[#0A0A0A] bg-white" style="animation-delay: 0.6s">
+              <div class="qr-tile w-[112px] h-[112px] p-2 shrink-0">{{QR}}</div>
+              <div class="flex flex-col gap-1.5">
+                <strong class="text-sm font-sans-body font-semibold text-[#171717] dark:text-[#EDEDED]">Get the iPhone app</strong>
+                <p class="text-xs text-[#595959] dark:text-[#A1A1AA] font-sans-body">Point your iPhone camera at the code. Free to install, 5 free scans included.</p>
+                <a href="{{STORE}}" class="text-xs font-mono text-[#14B8A6] hover:underline break-all">apps.apple.com/app/id6789503509</a>
+              </div>
+            </div>
+          </div>
+          <div class="relative flex justify-center order-first lg:order-none animate-on-scroll" style="animation-delay: 0.3s">
+            <div class="absolute inset-[10%_5%]" style="background:radial-gradient(ellipse, rgba(20,184,166,0.28), transparent 65%);"></div>
+            <img src="assets/lens-phone.webp" alt="Expense Lens on iPhone" width="340" class="relative z-10 w-[220px] lg:w-[340px]">
+          </div>
+        </div>
+{{STATS}}
+      </div>
+    </section>
