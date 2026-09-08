@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expense Lens hero sample D: Compact headline plus install panel</title>
+<title>Expense Lens hero sample D: Platform cards</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,51 +76,82 @@
     </nav>
 
     <main>
-    <!-- Hero Section (variant D) -->
-    <section class="md:pt-40 md:pb-24 pt-32 pb-16 relative z-10 overflow-hidden">
+    <!-- Hero Section (variant D): standard hero on top, platform cards replace the stats grid -->
+    <section class="md:pt-48 md:pb-32 pt-36 pb-20 relative z-10 overflow-hidden min-h-[90vh] flex flex-col justify-center">
+      <!-- Camera Lens Background Animation (verbatim from the site) -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 opacity-80">
+        <div class="lens-ring w-[200px] h-[200px] bg-[#14B8A6] blur-[100px] opacity-20 animate-breathe"></div>
+        <div class="lens-ring w-[300px] h-[300px] border-dashed animate-spin-slow !border-[#14B8A6]/20 dark:!border-[#262626]"></div>
+        <div class="lens-ring w-[450px] h-[450px] lens-gradient animate-spin-reverse"></div>
+        <div class="lens-ring w-[550px] h-[550px] border opacity-50 !border-[#171717]/5 dark:!border-white/5"></div>
+        <div class="lens-ring w-[700px] h-[700px] border border-dashed opacity-30 animate-spin-slow !border-[#171717]/5 dark:!border-white/5"></div>
+        <div class="lens-ring w-[900px] h-[900px] lens-gradient opacity-30 animate-spin-reverse"></div>
+      </div>
+
       <div class="container mx-auto px-4 relative max-w-7xl z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_440px] gap-12 items-start">
-          <div class="flex flex-col items-start gap-6">
-            <div class="dark:mix-blend-screen">
-              <h1 class="uppercase leading-[0.9] flex flex-col items-start text-5xl md:text-7xl font-medium text-[#171717] dark:text-[#EDEDED] tracking-tight mb-0 font-sans-display">
-                <span class="flex flex-wrap gap-x-3 md:gap-x-5"><span class="animate-on-scroll" style="animation-delay: 0.1s">AI Receipt</span><span class="text-gradient animate-on-scroll" style="animation-delay: 0.2s">Scanning</span></span>
-                <span class="flex flex-wrap gap-x-3 md:gap-x-5 animate-on-scroll" style="animation-delay: 0.3s">That Does <span class="text-gradient">Itself</span><span class="accent-dot">.</span></span>
-              </h1>
+        <div class="flex flex-col text-center mb-16 relative items-center justify-center">
+          <div class="flex flex-col w-full z-10 items-center justify-center dark:mix-blend-screen">
+            <h1 class="uppercase leading-[0.9] flex flex-col items-center text-5xl md:text-8xl font-medium text-[#171717] dark:text-[#EDEDED] tracking-tight mt-8 mb-0 font-sans-display transition-colors duration-300">
+              <span class="flex flex-wrap justify-center gap-x-3 md:gap-x-6">
+                <span class="animate-on-scroll" style="animation-delay: 0.1s">AI Receipt</span>
+                <span class="text-gradient animate-on-scroll" style="animation-delay: 0.2s">Scanning</span>
+              </span>
+              <span class="flex flex-wrap justify-center gap-x-3 md:gap-x-6 animate-on-scroll" style="animation-delay: 0.3s">
+                That Does <span class="text-gradient">Itself</span><span class="accent-dot">.</span>
+              </span>
+            </h1>
+
+          </div>
+          <p class="animate-on-scroll text-sm md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-2xl leading-relaxed mt-10 md:mt-12" style="animation-delay: 0.4s">
+            Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. Built for freelancers, expats, and digital nomads who track expenses in multiple currencies.
+          </p>
+          <p class="animate-on-scroll mt-6 flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] uppercase tracking-[0.2em] text-[#595959] dark:text-[#525252] font-sans-body" style="animation-delay: 0.5s">
+            <span class="whitespace-nowrap">158 currencies</span><span class="whitespace-nowrap">3 AI extraction models</span><span class="whitespace-nowrap">Scan to export in under 15s</span>
+          </p>
+        </div>
+
+        <!-- Platform cards: same card system as the stats grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1 max-w-6xl mx-auto animate-on-scroll" style="animation-delay: 0.6s">
+
+          <!-- iPhone -->
+          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-[#14B8A6]/40 p-8 flex flex-col justify-between min-h-[300px] relative bg-white/80">
+            <div class="absolute top-5 right-5 text-[10px] text-[#14B8A6] font-sans-body border border-[#14B8A6]/40 px-2 py-0.5 rounded-full" aria-hidden="true">NEW</div>
+            <div class="flex justify-between items-start mb-8">
+              <iconify-icon icon="lucide:smartphone" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon>
             </div>
-            <p class="animate-on-scroll text-sm md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-xl leading-relaxed" style="animation-delay: 0.4s">
-              Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. Built for freelancers, expats, and digital nomads who track expenses in multiple currencies.
-            </p>
-            <div class="animate-on-scroll flex flex-wrap gap-8 counter-trigger" style="animation-delay: 0.5s">
-              <div><div class="text-3xl text-[#171717] dark:text-[#EDEDED] tracking-tighter font-sans-display font-light"><span data-target="158" data-suffix="" data-prefix="">0</span></div><div class="text-[10px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">Currencies</div></div>
-              <div><div class="text-3xl text-[#171717] dark:text-[#EDEDED] tracking-tighter font-sans-display font-light"><span data-target="3" data-suffix="" data-prefix="">0</span></div><div class="text-[10px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">AI models</div></div>
-              <div><div class="text-3xl text-[#171717] dark:text-[#EDEDED] tracking-tighter font-sans-display font-light"><span data-target="15" data-suffix="s" data-prefix="&lt;">0</span></div><div class="text-[10px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">Scan to export</div></div>
-              <div><div class="text-3xl text-[#171717] dark:text-[#EDEDED] tracking-tighter font-sans-display font-light"><span data-target="5" data-suffix="" data-prefix="">0</span></div><div class="text-[10px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">Free scans</div></div>
+            <div>
+              <div class="text-4xl text-[#171717] dark:text-[#EDEDED] mb-1 tracking-tighter font-sans-display font-light">iPhone</div>
+              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium mb-6">On the App Store</p>
+              <div class="flex items-end justify-between gap-4">
+<a href="https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509" class="store-badge inline-block w-full sm:w-auto shrink-0"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="52"></a>
+                <div class="qr-tile w-[72px] h-[72px] p-1 hidden sm:block shrink-0"><a href="https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509" aria-label="Open Expense Lens on the App Store"><img src="assets/app-store-qr.svg" alt="QR code linking to the App Store listing"></a></div>
+              </div>
             </div>
           </div>
 
-          <!-- Install panel -->
-          <div class="border border-subtle dark:bg-[#0A0A0A] bg-white animate-on-scroll" style="animation-delay: 0.4s">
-            <div class="flex justify-between px-5 py-3 border-b border-subtle text-[10px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body"><span>Get Expense Lens</span><span class="text-[#14B8A6]">iOS released</span></div>
-            <div class="grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-2 sm:gap-4 items-center px-5 py-4 border-b border-subtle">
-              <div class="text-[11px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">iPhone</div>
-              <div class="flex items-center gap-4 flex-wrap">
-                <div class="qr-tile w-[92px] h-[92px] p-1.5 hidden sm:block"><a href="https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509" aria-label="Open Expense Lens on the App Store"><img src="assets/app-store-qr.svg" alt="QR code linking to the App Store listing"></a></div>
-                <div class="w-full sm:w-auto">
-<a href="https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509" class="store-badge inline-block w-full sm:w-auto shrink-0"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="52"></a>
-                  <p class="hidden sm:block text-xs text-[#595959] dark:text-[#A1A1AA] font-sans-body mt-2">Scan the code or tap the badge.</p>
-                </div>
-              </div>
+          <!-- Web -->
+          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[300px] relative hover:border-[#14B8A6]/40 transition-colors bg-white/80">
+            <div class="absolute top-5 right-5 text-[10px] text-[#595959] dark:text-[#525252] font-sans-body border border-subtle px-2 py-0.5 rounded-full" aria-hidden="true">LIVE</div>
+            <div class="flex justify-between items-start mb-8">
+              <iconify-icon icon="lucide:monitor" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-2 sm:gap-4 items-center px-5 py-4 border-b border-subtle">
-              <div class="text-[11px] uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body">Web</div>
-              <div class="flex items-center gap-4 flex-wrap">
-                <a href="https://app.expense-lens.com/signup" class="inline-block w-full sm:w-auto text-center bg-[#14B8A6] text-[#050505] px-6 py-3.5 text-xs font-semibold tracking-widest uppercase font-sans-body hover:bg-[#2DD4BF] transition-colors whitespace-nowrap">Get Started Free</a>
-                <p class="text-xs text-[#595959] dark:text-[#A1A1AA] font-sans-body">Desktop and mobile browser.</p>
-              </div>
+            <div>
+              <div class="text-4xl text-[#171717] dark:text-[#EDEDED] mb-1 tracking-tighter font-sans-display font-light">Web</div>
+              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium mb-6">Desktop and mobile browser</p>
+              <a href="https://app.expense-lens.com/signup" class="inline-flex items-center justify-center w-full h-[52px] bg-[#14B8A6] text-[#050505] px-8 text-xs font-semibold tracking-widest uppercase font-sans-body hover:bg-[#2DD4BF] transition-colors whitespace-nowrap">Get Started Free</a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-2 sm:gap-4 items-center px-5 py-4">
-              <div class="text-[11px] uppercase tracking-widest text-[#525252] font-sans-body">Android</div>
-              <p class="text-xs text-[#525252] font-sans-body">In testing. Follow the roadmap for the release date.</p>
+          </div>
+
+          <!-- Android -->
+          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[300px] relative bg-white/80">
+            <div class="absolute top-5 right-5 text-[10px] text-[#595959] dark:text-[#525252] font-sans-body border border-subtle px-2 py-0.5 rounded-full" aria-hidden="true">IN TESTING</div>
+            <div class="flex justify-between items-start mb-8">
+              <iconify-icon icon="lucide:tablet-smartphone" class="text-2xl text-[#595959] dark:text-[#525252]" style="stroke-width:1.5"></iconify-icon>
+            </div>
+            <div>
+              <div class="text-4xl text-[#595959] dark:text-[#525252] mb-1 tracking-tighter font-sans-display font-light">Android</div>
+              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#525252] font-sans-body font-medium mb-6">Beta with testers now</p>
+              <a href="#" class="inline-flex items-center justify-center w-full h-[52px] border border-subtle text-[#595959] dark:text-[#A1A1AA] px-8 text-xs font-semibold tracking-widest uppercase font-sans-body hover:border-[#14B8A6] hover:text-[#14B8A6] transition-colors whitespace-nowrap">See the roadmap</a>
             </div>
           </div>
         </div>
