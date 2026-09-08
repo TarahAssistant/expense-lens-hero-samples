@@ -114,7 +114,7 @@ img { display: block; max-width: 100%; }
 .btn:hover { background: #2DD4BF; }
 .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn.ghost:hover { background: var(--surface); }
-.badge { display: inline-block; line-height: 0; }
+.badge { display: inline-block; line-height: 0; text-align: center; }
 .badge img { height: 52px; width: auto; }
 
 .pill {
@@ -161,8 +161,7 @@ img { display: block; max-width: 100%; }
   .a-row { flex-direction: column; gap: 16px; }
   .a-row .sub { text-align: center; }
   .a-cta { flex-direction: column; width: 100%; gap: 10px; }
-  .a-cta .btn, .a-cta .badge img { width: 100%; }
-  .a-cta .badge { width: 100%; }
+  .a-cta .btn, .a-cta .badge { width: 100%; }
 }
 
 /* ---------- B: split hero with the phone ---------- */
@@ -191,7 +190,7 @@ img { display: block; max-width: 100%; }
   .b-right img { width: 220px; }
   .b-left { gap: 18px; }
   .b-cta { width: 100%; flex-direction: column; gap: 10px; }
-  .b-cta .btn, .b-cta .badge, .b-cta .badge img { width: 100%; }
+  .b-cta .btn, .b-cta .badge { width: 100%; }
 }
 
 /* ---------- C: QR code in the lens ---------- */
@@ -212,7 +211,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 767px) {
   .c-wrap { gap: 18px; }
   .c-cta { width: 100%; flex-direction: column; gap: 10px; }
-  .c-cta .btn, .c-cta .badge, .c-cta .badge img { width: 100%; }
+  .c-cta .btn, .c-cta .badge { width: 100%; }
 }
 
 /* ---------- D: compact headline plus install panel ---------- */
@@ -241,7 +240,8 @@ img { display: block; max-width: 100%; }
 @media (max-width: 639px) {
   .prow { grid-template-columns: 1fr; gap: 8px; padding: 14px 16px; }
   .prow .v, .prow .v > div { width: 100%; }
-  .prow .btn, .prow .badge, .prow .badge img { width: 100%; height: 48px; }
+  .prow .btn, .prow .badge { width: 100%; }
+  .prow .btn { height: 48px; }
 }
 
 /* Sample chrome: back link */
