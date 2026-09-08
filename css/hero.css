@@ -115,7 +115,7 @@ img { display: block; max-width: 100%; }
 .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn.ghost:hover { background: var(--surface); }
 .badge { display: inline-block; line-height: 0; text-align: center; }
-.badge img { height: 52px; width: auto; }
+.badge img { height: 52px; width: auto; margin: 0 auto; }
 
 .pill {
   display: inline-flex; align-items: center; gap: 10px;
