@@ -20,7 +20,9 @@ body { font-feature-settings: "cv11", "ss01"; background-color: var(--bg); font-
 .lang-menu-item:hover { background: var(--border); }
 @keyframes animationIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
 .animate-on-scroll { opacity: 0; will-change: transform, opacity; }
-.animate-on-scroll.animate { animation: animationIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.animate-on-scroll.animate { animation: animationIn 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+/* Phones get no scroll reveal at all: content is visible on load. */
+@media (max-width: 767px) { .animate-on-scroll { opacity: 1; will-change: auto; } .animate-on-scroll.animate { animation: none; } }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 .lens-ring { border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 1px solid var(--lens-ring); pointer-events: none; transition: border-color 0.3s ease; }
 .lens-gradient { background: conic-gradient(from 0deg, transparent 0%, var(--lens-gradient-start) 15%, transparent 40%, var(--lens-gradient-mid) 60%, transparent 100%); mask-image: radial-gradient(transparent 60%, black 70%); -webkit-mask-image: radial-gradient(transparent 60%, black 70%); }

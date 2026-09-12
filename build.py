@@ -68,7 +68,7 @@ VARIANTS = {
     "a": "Keep the hero, add the install row",
     "b": "Split hero with the phone",
     "c": "QR code in the lens",
-    "d": "Platform cards",
+    "d": "A on phones, B on desktop",
 }
 
 sections = read("sections.html") \

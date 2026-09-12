@@ -11,12 +11,13 @@ Left out on purpose: GTM and analytics, the cookie banner, the geo pricing scrip
 - **A** `a.html` Keep the hero, add the install row. Badge and a small QR next to the existing CTA.
 - **B** `b.html` Split hero with the phone. Left-aligned copy, phone screenshot, install strip with QR under the buttons.
 - **C** `c.html` QR code in the lens. The lens rings become a viewfinder around the QR code.
-- **D** `d.html` Platform cards. The standard hero on top; three cards for iPhone (badge and QR), web, and Android replace the stats grid.
+- **D** `d.html` A on phones, B on desktop. Centered stack with the lens rings under `lg`, split layout with a larger cropped phone screenshot from `lg` up. One web CTA and one App Store badge, no pill, no install strip, no QR. New headline: "AI Receipt Scanning That Gives You Time Back."
 
 ## Behaviour
 
 - The badge and the QR code open the App Store listing: https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509
-- Under 640px the QR code hides. A visitor already on a phone taps the badge.
+- Under 640px the QR code hides. A visitor already on a phone taps the badge. D drops the QR code everywhere.
+- Scroll reveal runs at 0.35s with a near-zero intersection threshold on desktop and is off under 768px.
 - The large CTA at the bottom also carries the badge.
 
 ## Editing

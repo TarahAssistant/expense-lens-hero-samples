@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expense Lens hero sample D: Platform cards</title>
+<title>Expense Lens hero sample D: A on phones, B on desktop</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,8 +76,9 @@
     </nav>
 
     <main>
-    <!-- Hero Section (variant D): standard hero on top, platform cards replace the stats grid -->
-    <section class="md:pt-48 md:pb-32 pt-36 pb-20 relative z-10 overflow-hidden min-h-[90vh] flex flex-col justify-center">
+    <!-- Hero Section (variant D): A's centered stack on phones, B's split layout with the phone on desktop -->
+    <section class="lg:pt-44 lg:pb-24 pt-32 pb-16 relative z-10 overflow-hidden">
+      <div class="lg:hidden">
       <!-- Camera Lens Background Animation (verbatim from the site) -->
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 opacity-80">
         <div class="lens-ring w-[200px] h-[200px] bg-[#14B8A6] blur-[100px] opacity-20 animate-breathe"></div>
@@ -88,73 +89,62 @@
         <div class="lens-ring w-[900px] h-[900px] lens-gradient opacity-30 animate-spin-reverse"></div>
       </div>
 
+      </div>
       <div class="container mx-auto px-4 relative max-w-7xl z-10">
-        <div class="flex flex-col text-center mb-16 relative items-center justify-center">
-          <div class="flex flex-col w-full z-10 items-center justify-center dark:mix-blend-screen">
-            <h1 class="uppercase leading-[0.9] flex flex-col items-center text-5xl md:text-8xl font-medium text-[#171717] dark:text-[#EDEDED] tracking-tight mt-8 mb-0 font-sans-display transition-colors duration-300">
-              <span class="flex flex-wrap justify-center gap-x-3 md:gap-x-6">
-                <span class="animate-on-scroll" style="animation-delay: 0.1s">AI Receipt</span>
-                <span class="text-gradient animate-on-scroll" style="animation-delay: 0.2s">Scanning</span>
-              </span>
-              <span class="flex flex-wrap justify-center gap-x-3 md:gap-x-6 animate-on-scroll" style="animation-delay: 0.3s">
-                That Does <span class="text-gradient">Itself</span><span class="accent-dot">.</span>
-              </span>
-            </h1>
-
-          </div>
-          <p class="animate-on-scroll text-sm md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-2xl leading-relaxed mt-10 md:mt-12" style="animation-delay: 0.4s">
-            Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. Built for freelancers, expats, and digital nomads who track expenses in multiple currencies.
-          </p>
-          <p class="animate-on-scroll mt-6 flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] uppercase tracking-[0.2em] text-[#595959] dark:text-[#525252] font-sans-body" style="animation-delay: 0.5s">
-            <span class="whitespace-nowrap">158 currencies</span><span class="whitespace-nowrap">3 AI extraction models</span><span class="whitespace-nowrap">Scan to export in under 15s</span>
-          </p>
-        </div>
-
-        <!-- Platform cards: same card system as the stats grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-1 max-w-6xl mx-auto animate-on-scroll" style="animation-delay: 0.6s">
-
-          <!-- iPhone -->
-          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-[#14B8A6]/40 p-8 flex flex-col justify-between min-h-[300px] relative bg-white/80">
-            <div class="absolute top-5 right-5 text-[10px] text-[#14B8A6] font-sans-body border border-[#14B8A6]/40 px-2 py-0.5 rounded-full" aria-hidden="true">NEW</div>
-            <div class="flex justify-between items-start mb-8">
-              <iconify-icon icon="lucide:smartphone" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon>
+        <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center mb-16 lg:mb-24">
+          <div class="flex flex-col items-center text-center lg:items-start lg:text-left gap-8 lg:gap-7">
+            <div class="dark:mix-blend-screen">
+              <h1 class="uppercase leading-[0.9] flex flex-col items-center lg:items-start text-5xl md:text-7xl font-medium text-[#171717] dark:text-[#EDEDED] tracking-tight mt-8 lg:mt-0 mb-0 font-sans-display">
+                <span class="flex flex-wrap justify-center lg:justify-start gap-x-3 md:gap-x-5">
+                  <span class="animate-on-scroll">AI Receipt</span>
+                  <span class="text-gradient animate-on-scroll" style="animation-delay: 0.05s">Scanning</span>
+                </span>
+                <span class="flex flex-wrap justify-center lg:justify-start gap-x-3 md:gap-x-5 animate-on-scroll" style="animation-delay: 0.1s">
+                  <span>That Gives You</span><span class="text-gradient">Time Back<span class="accent-dot">.</span></span>
+                </span>
+              </h1>
             </div>
-            <div>
-              <div class="text-4xl text-[#171717] dark:text-[#EDEDED] mb-1 tracking-tighter font-sans-display font-light">iPhone</div>
-              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium mb-6">On the App Store</p>
-              <div class="flex items-end justify-between gap-4">
+            <p class="animate-on-scroll text-base md:text-lg text-[#595959] dark:text-[#A1A1AA] tracking-tight font-sans-display max-w-xl leading-relaxed" style="animation-delay: 0.15s">
+              Snap a receipt. AI extracts merchant, amount, date, and currency in seconds. 158 currencies, tax-ready reports, on iPhone and on the web.
+            </p>
+            <!-- One web CTA, one App Store link. No pill, no install strip, no QR. -->
+            <div class="animate-on-scroll flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4 w-full sm:w-auto" style="animation-delay: 0.2s">
+              <a href="https://app.expense-lens.com/signup" class="inline-flex items-center justify-center w-full sm:w-auto h-[52px] bg-[#14B8A6] text-[#050505] px-12 text-xs font-semibold tracking-widest uppercase font-sans-body hover:bg-[#2DD4BF] transition-colors whitespace-nowrap">Get Started Free</a>
 <a href="https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509" class="store-badge inline-block w-full sm:w-auto shrink-0"><img src="assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="52"></a>
-                <div class="qr-tile w-[72px] h-[72px] p-1 hidden sm:block shrink-0"><a href="https://apps.apple.com/us/app/expense-lens-scan-track/id6789503509" aria-label="Open Expense Lens on the App Store"><img src="assets/app-store-qr.svg" alt="QR code linking to the App Store listing"></a></div>
-              </div>
             </div>
           </div>
-
-          <!-- Web -->
-          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[300px] relative hover:border-[#14B8A6]/40 transition-colors bg-white/80">
+          <!-- Phone, desktop only. Cropped screenshot so the UI text is legible at this size. -->
+          <div class="hidden lg:flex relative justify-center animate-on-scroll" style="animation-delay: 0.1s">
+            <div class="absolute inset-[8%_12%]" style="background:radial-gradient(ellipse, rgba(20,184,166,0.28), transparent 65%);"></div>
+            <img src="assets/lens-phone-crop.webp" alt="Expense Lens on iPhone: a mileage trip from Basel to Zurich saved as an expense" width="672" height="1391" class="relative z-10 w-[300px] xl:w-[340px] h-auto">
+          </div>
+        </div>
+        <!-- Stats Grid (verbatim from the site) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 max-w-6xl mx-auto counter-trigger animate-on-scroll" style="animation-delay: 0.7s">
+          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[220px] relative group hover:border-[#14B8A6]/40 transition-colors bg-white/80">
             <div class="absolute top-5 right-5 text-[10px] text-[#595959] dark:text-[#525252] font-sans-body border border-subtle px-2 py-0.5 rounded-full" aria-hidden="true">LIVE</div>
-            <div class="flex justify-between items-start mb-8">
-              <iconify-icon icon="lucide:monitor" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon>
-            </div>
+            <div class="flex justify-between items-start mb-8"><iconify-icon icon="lucide:globe-2" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon></div>
             <div>
-              <div class="text-4xl text-[#171717] dark:text-[#EDEDED] mb-1 tracking-tighter font-sans-display font-light">Web</div>
-              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium mb-6">Desktop and mobile browser</p>
-              <a href="https://app.expense-lens.com/signup" class="inline-flex items-center justify-center w-full h-[52px] bg-[#14B8A6] text-[#050505] px-8 text-xs font-semibold tracking-widest uppercase font-sans-body hover:bg-[#2DD4BF] transition-colors whitespace-nowrap">Get Started Free</a>
+              <div class="text-5xl text-[#171717] dark:text-[#EDEDED] mb-2 tracking-tighter font-sans-display font-light"><span data-target="158" data-suffix="" data-prefix="">0</span></div>
+              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Currencies Supported</p>
             </div>
           </div>
-
-          <!-- Android -->
-          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[300px] relative bg-white/80">
-            <div class="absolute top-5 right-5 text-[10px] text-[#595959] dark:text-[#525252] font-sans-body border border-subtle px-2 py-0.5 rounded-full" aria-hidden="true">IN TESTING</div>
-            <div class="flex justify-between items-start mb-8">
-              <iconify-icon icon="lucide:tablet-smartphone" class="text-2xl text-[#595959] dark:text-[#525252]" style="stroke-width:1.5"></iconify-icon>
-            </div>
+          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[220px] relative group hover:border-[#14B8A6]/40 transition-colors bg-white/80">
+            <div class="flex justify-between items-start mb-8"><iconify-icon icon="lucide:brain" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon></div>
             <div>
-              <div class="text-4xl text-[#595959] dark:text-[#525252] mb-1 tracking-tighter font-sans-display font-light">Android</div>
-              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#525252] font-sans-body font-medium mb-6">Beta with testers now</p>
-              <a href="#" class="inline-flex items-center justify-center w-full h-[52px] border border-subtle text-[#595959] dark:text-[#A1A1AA] px-8 text-xs font-semibold tracking-widest uppercase font-sans-body hover:border-[#14B8A6] hover:text-[#14B8A6] transition-colors whitespace-nowrap">See the roadmap</a>
+              <div class="text-5xl text-[#171717] dark:text-[#EDEDED] mb-2 tracking-tighter font-sans-display font-light"><span data-target="3" data-suffix="" data-prefix="">0</span></div>
+              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">AI Extraction Models</p>
+            </div>
+          </div>
+          <div class="dark:bg-[#0A0A0A]/80 backdrop-blur-md border border-subtle p-8 flex flex-col justify-between min-h-[220px] relative group hover:border-[#14B8A6]/40 transition-colors bg-white/80">
+            <div class="flex justify-between items-start mb-8"><iconify-icon icon="lucide:file-spreadsheet" class="text-2xl text-[#171717] dark:text-[#EDEDED]" style="stroke-width:1.5"></iconify-icon></div>
+            <div>
+              <div class="text-5xl text-[#171717] dark:text-[#EDEDED] mb-2 tracking-tighter font-sans-display font-light"><span data-target="15" data-suffix="s" data-prefix="&lt;">0</span></div>
+              <p class="text-xs uppercase tracking-widest text-[#595959] dark:text-[#A1A1AA] font-sans-body font-medium">Scan to Export Time</p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
     <!-- Scroll Reveal Text (words are static here; the live site fades them in on scroll) -->
@@ -527,7 +517,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+  }, { threshold: 0.01, rootMargin: "0px 0px 40px 0px" });
   document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
   document.querySelectorAll(".counter-trigger:not(.animate-on-scroll)").forEach((el) => observer.observe(el));
 });
